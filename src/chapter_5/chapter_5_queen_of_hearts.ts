@@ -45,11 +45,10 @@ export function meetTheQueen(): void {
 	}
 }
 
-
 function getNames(): string[]  {
 	return ['The White Rabbit', 'The March Hare', 'The Cheshire Cat', 'The Mad Hatter'];
 }
 
 function getWitnesses(names: string[]): Witness[] {
-return names.map(nom => {return {name: nom, giveEvidence: () => 'Not Guilty'}});
+	return names.map(nom => {return {name: nom, giveEvidence: () => 'Not Guilty'}});
 }
