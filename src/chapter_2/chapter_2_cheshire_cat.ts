@@ -8,7 +8,7 @@ const EXPRESSIONS = [
 	'😁 Grin 😁',
 	'😶 Blank Face 😶',
 	'😡 Angry Face 😡',
-] as const; // 💡 CURIOUS - see activity_2.md for explanations
+] as const; 
 type FacialExpression = typeof EXPRESSIONS[number];
 
 class CheshireCat {
@@ -21,7 +21,7 @@ export function meetTheCheshireCat(): void {
 
 	const theCat = new CheshireCat();
 
-	
+	theCat.expression = '😁 Grin 😁';
 
 	print(
 		`You can see ${theCat.name}. A wide ${theCat.expression} is hovering in the air.`
