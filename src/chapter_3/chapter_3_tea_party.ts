@@ -18,10 +18,16 @@ type Table = {
 	seats: Array<Seat>;
 };
 
-function setTheTable(): Table {
-	// 👉 FIXME ❌
-	return { seats: [] };
-}
+const setTheTable = (): Table => {
+	
+	const table:Table = { seats: [] };
+	
+	for (let i = 0; i < 5; i++) {
+		table.seats.push({ drink: { type: 'Tea', poured: true } });
+	}
+
+	return table;
+};
 
 export function attendATeaParty() {
 	clear(true);
