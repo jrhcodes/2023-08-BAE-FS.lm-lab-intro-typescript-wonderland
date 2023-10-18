@@ -43,11 +43,11 @@ export function cakeMenu(consumables: MagicConsumable[], height: number, require
                 height = item.effect(height);
                 item.quantity--;
 
-                print(`You ${consumables[index].verb} from the ${consumables[index].name} (${consumables[index].quantity} doses remain).`);
-                print(`Poof, you are now ${heightInFeetAndInches(height)} tall!`);
+                print(`You ${consumables[index].verb} from the ${consumables[index].name}!`);
+                print(`*Poof*`);
 
                 if (consumables.reduce((acc, cur) => acc + cur.quantity, 0) <= 0) {
-                    print(`There are no more magic consumables left!`);
+                    print(`There are no more magic consumables left and you are still the wrong size for the door!`);
                     return pressAKeyToContinue(() => endAdventure());
                     
                 }
@@ -56,7 +56,7 @@ export function cakeMenu(consumables: MagicConsumable[], height: number, require
                     return pressAKeyToContinue(() => meetTheCheshireCat());
                 };
             } else {
-                print(`There is no more ${consumables[index].name} left!`);
+                print(`The ${consumables[index].name} is already finished!`);
             }
         } else {
             print("Invalid Output!");
