@@ -1,8 +1,9 @@
 import { endAdventure } from '../..';
-import { meetTheCheshireCat } from '../chapter_2/chapter_2_cheshire_cat';
-import { clear, print, askQuestion } from '../ui/console';
+import { letThemEatCake } from '../chapter_1a/chapter_1a';
+import { clear, print, askQuestion, interfaceClose } from '../ui/console';
 import { parseHoleInput } from '../ui/parse_input';
 import { Hole, HOLES } from './chapter_1.types';
+import {meetTheCheshireCat} from '../chapter_2/chapter_2_cheshire_cat';
 
 export function enterTheRabbitHole(name: string) {
 	clear(false);
@@ -38,8 +39,8 @@ export function enterHole(hole: Hole): void {
 	clear(true);
 
 	if (hole === 'Rabbit') {
-		return meetTheCheshireCat();
-	} else {
+		return letThemEatCake();
+	} else { 
 		print(`WHAAAAT ❓🤯😅❓`);
 		print(`You can't find adventures there!`);
 		return endAdventure();

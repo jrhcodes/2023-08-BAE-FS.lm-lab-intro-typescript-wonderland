@@ -44,7 +44,6 @@ export function playCroquet(): void {
 		},
 	};
 
-	
 	if (game && game.hit && game.hit('Hedgehog', 'Flamingo')) {
 		print('🏆 Success! You scored! 🏆');
 		print('Time to chat with the queen...');

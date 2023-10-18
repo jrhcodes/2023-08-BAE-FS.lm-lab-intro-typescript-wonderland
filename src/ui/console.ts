@@ -24,5 +24,11 @@ const reader = readline.createInterface({
 
 // this function allows us to prompt the user with a question, and call a callback function with whatever string has been input
 export function askQuestion(question: string, callback: (arg: string) => void) {
+
 	reader.question(`❓ ${question} 👉 `, callback);
+
 }
+
+export const pressAKeyToContinue = (callback: (answer:string)=> void) => reader.question('Press any key to continue...', callback);
+
+export const interfaceClose = () => reader.close();

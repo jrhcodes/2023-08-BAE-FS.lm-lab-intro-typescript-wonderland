@@ -30,7 +30,7 @@ export function meetTheCheshireCat(): void {
 	if (theCat.expression === '😁 Grin 😁') {
 		print(
 			`🥳 The cat allows you to continue onwards. There is the sound of a party in the distance... 🥳 `
-		);
+		); 
 		return askQuestion('Press ENTER to continue! ', attendATeaParty);
 	} else {
 		print(`😱 The cat will not allow you to pass. 😱 `);
