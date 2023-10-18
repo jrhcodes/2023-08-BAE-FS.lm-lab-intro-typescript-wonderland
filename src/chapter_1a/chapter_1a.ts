@@ -52,7 +52,7 @@ export function cakeMenu(consumables: MagicConsumable[], height: number, require
                     
                 }
                 if (height === requiredHeight) {
-                    print("You are exactly the right height, you step through the door and return to your normal size!")
+                    print("You are exactly the right height for the door, you step through it and return to your normal size!")
                     return pressAKeyToContinue(() => meetTheCheshireCat());
                 };
             } else {
